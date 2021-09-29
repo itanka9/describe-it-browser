@@ -1,0 +1,11 @@
+dist/
+.idea/
+node_modules/
+.cache/
+.vscode/
+.DS_Store
+npm-debug.log
+lerna-debug.log
+yarn.lock
+results.zip
+.nvmrc
