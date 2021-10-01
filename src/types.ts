@@ -8,7 +8,7 @@ export interface It {
 }
 
 export interface Describe {
-    type: 'descibe',
+    type: 'describe',
     name: string,
     parent?: Describe,
     beforeAll?: Hook,

@@ -1,15 +1,15 @@
 {
   "name": "describe-it-browser",
-  "version": "1.0.3",
+  "version": "1.0.12",
   "description": "",
-  "source": "src/index.ts",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "source": "src/lib.ts",
+  "main": "dist/lib.js",
+  "types": "dist/lib.d.ts",
   "scripts": {
     "start": "parcel ./demo/index.html",
-    "build": "parcel build ./src/index.ts",
-    "watch": "parcel watch ./src/index.ts",
-    "types": "tsc -d --emitDeclarationOnly ./src/index.ts && mv src/*.d.ts dist/",
+    "build": "parcel build ./src/lib.ts",
+    "watch": "parcel watch ./src/lib.ts",
+    "types": "tsc -d --target es6 --emitDeclarationOnly ./src/lib.ts && mv src/*.d.ts dist/",
     "clean": "rm -fr dist/*",
     "test": "parcel build --target=node ./test/index.ts && node ./dist/index",
     "prepublish": "npm run clean && npm run build && npm run types"

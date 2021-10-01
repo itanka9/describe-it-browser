@@ -1,5 +1,4 @@
 import { Describe, Hook } from "./types";
-export { createUI } from './ui'
 
 const stack: Describe[] = [];
 let root: Describe;
@@ -12,7 +11,7 @@ export function getRoot () {
 
 export function resetRoot () {
     root = {
-        type: 'descibe',
+        type: 'describe',
         name: '',
         children: []
     }
@@ -24,7 +23,7 @@ export function describe(name: string, fn: Hook) {
     curr = stack[stack.length - 1];
     const parent = curr ?? root;
     const newCurr: Describe = {
-        type: 'descibe',
+        type: 'describe',
         name,
         parent,
         children: []
